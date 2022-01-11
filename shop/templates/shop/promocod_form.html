@@ -1,0 +1,34 @@
+{% include "shop/includes/saitbar.html" %}
+<html>
+<body>
+<style>
+input.text {
+    width:  205px;
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+    border:2px solid #999;
+    font-size:16px;
+}
+input.tel {
+     width:  151px;
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+    border:2px solid #999;
+    font-size:16px;
+}
+
+</style>
+ <div>
+        <h3 style='padding: 40px 120px 0px'>Промокод</h3>
+     <p style='padding-left:40px'> Для перехода на страницу с дополнительными товарами введите свои данные и нажмите кнопку "сгенерировать промокод"</p>
+                    <p style='padding-left:40px'>Введите свое имя:
+                        <input type="text" class="text" name="promo" /></p>
+                    <p>Введите номер телефона:
+                        <input  type="tel" class="tel" name="promo" placeholder="+7(___)___-__-__" /></p>
+     <p style='padding-left:110px'><a href="Accsesor"><input type="submit" value="Сгенерировать промокод" /></a></p>
+
+</body>
+{% include "shop/includes/end.html" %}
+
+
+</html>

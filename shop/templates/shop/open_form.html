@@ -1,0 +1,33 @@
+{% include "shop/includes/saitbar.html" %}
+
+
+<html>
+<body>
+<div>
+    <h3>Список</h3>
+    <table>
+        <tr>
+            <td><p>Наименование</p></td>
+            <td><p>Цена</p></td>
+            <td></td>
+        </tr>
+        {% for p in opening %}
+        <div class="alert alert-warning mt-2">
+        <style>
+            a {text-decoration: none;}
+        </style>
+        <tr>
+            <td><p style='padding-right:40px; text-align:justify'>
+                <a  href="">{{ p.name }}</a></p></td>
+            <td><p style='padding-right:40px; text-align:justify'>{{ p.price }}</p></td>
+            <td><img src='{{ p.image }}' alt = '' width='240' height='240' /></td>
+            <td><p style='padding-left:20px; text-align:justify'><a href="/buy/{{ p.id }}">Купить</a></p></td>
+        </div>
+        {% endfor %}
+
+    </table>
+    {% include "shop/includes/end.html" %}
+
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% include "shop/includes/saitbar.html" %}
+
+
+<html>
+<body>
+<div class="v-cloak">
+    <h3 align="center">Список ноутбуков со скидкой в 5%</h3>
+    <div id="conteiner1">
+    <table>
+        <tr>
+            <td><p>Наименование</p></td>
+            <td><p>Цена</p></td>
+            <td></td>
+        </tr>
+        {% for p in products %}
+        <div >
+        <style>
+            a {text-decoration: none;}
+        </style>
+        <tr>
+            <td style='padding-right:40px; text-align:justify'>
+                <a  href="/open/{{ p.id }}">{{ p.name }}</a></td>
+            <td style='padding-right:40px; text-align:justify'>{{ p.price }}</td>
+            <td><img src='{{ p.image }}' alt = '' width='240' height='240' style="object-fit: cover" /></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td  style='padding-left:50px; text-align:justify'><button ><a href="/open/{{ p.id }}">Открыть</a></button>
+                <button><a href="/buy/{{ p.id }}">Купить</a></button></></td>
+            </tr>
+        </div>
+        {% endfor %}
+    </table>
+</div>
+    </div>
+{% include "shop/includes/end2.html" %}
+{% include "shop/includes/style.html" %}
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+
+{% block menu %}
+<div style='text-align:left'>
+    <style type="text/css">
+      .saitbar {
+         margin: 0 left;
+         padding: 0;
+         width: 240px;
+         }
+      .menu-4, .menu-4 .podmenu, .menu-4 .podmenu-2 {
+         margin: 0;
+         padding: 0;
+         background-color: #ffffff;
+         height: auto;
+         list-style-type: none;
+         }
+      .menu-4 li {
+         margin: 0 0 2px;
+         padding: 0;
+         background-color: #b2b2b2;
+         transition: all 0.7s ease 0s;
+         display: block;
+         position: relative;
+         }
+      .menu-4 a {
+         padding: 6px 0 8px 10px;
+         color: #000000;
+         text-decoration: none;
+         border-left: 6px solid #b2b2b2;
+         transition: all 0.7s ease 0s;
+         display: block;
+         }
+      .menu-4 li:hover {
+         background-color: #b2b2b2;
+         }
+      .menu-4 li:hover a {
+         color: #000000;
+         padding: 6px 0 8px 22px;
+         border-left: 6px solid #900000;
+         }
+      .menu-4 ul.podmenu, .menu-4 ul.podmenu-2 {
+         display: none;
+         position: absolute;
+         top: 0;
+         width: 150px;
+         background-color: #ffffff;
+         }
+      .menu-4 ul.podmenu {
+         left: 214px;
+         }
+      .menu-4 ul.podmenu-2 {
+         left: 150px;
+         }
+      .menu-4 li:hover .podmenu, .podmenu li:hover .podmenu-2 {
+         display: block;
+         padding: 4px 0 4px 14px;
+         }
+      .menu-4 .podmenu li, .podmenu .podmenu-2 li {
+         margin: 0;
+         padding: 0;
+         background-color: #b2b2b2;
+         border-left: 0 solid #273ed9;
+         transition: all 0.7s ease 0s;
+         display: block;
+         }
+      .menu-4 .podmenu li a, .podmenu .podmenu-2 li a {
+         border-left: 0 solid #900000;
+         padding: 4px 10px;
+         color: #000000;
+         font-size: 14px;
+         border-bottom: 1px dotted #000000;
+         }
+      .menu-4 .podmenu li a:hover, .podmenu .podmenu-2 li a:hover {
+         color: #0e25c0;
+         }
+    </style>
+
+    <div class="saitbar">
+     <ul class="menu-4">
+       <li><a href="/">Главная страница</a></li>
+       <li><a href="promocod">Промокод</a></li>
+       <li><a href="Catalog">Каталог ⇒</a>
+         <ul class="podmenu">
+           <li><a href="#">Ноутбуки</a></li>
+           <li><a href="#">Стационарные компьютеры</a></li>
+           <li><a href="#">Комплектующие</a>
+             <ul class="podmenu-2">
+               <li><a href="#">Наушники</a></li>
+               <li><a href="#">Видеокарты</a></li>
+             </ul>
+           </li>
+         </ul>
+     </ul>
+     </div>
+</div>
+</body>
+</html>
+{% endblock %}
+
